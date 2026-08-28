@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.auth.LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -23,6 +22,7 @@
             android:layout_height="wrap_content"
             android:text="E-mail"
             android:textColor="@color/white"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -31,6 +31,7 @@
             android:background="@drawable/bg_edit_text"
             android:padding="16dp"
             android:layout_marginTop="4dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,10 +64,20 @@
             android:layout_marginTop="4dp">
 
             <TextView
+                android:id="@+id/btnRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Criar Conta"
                 android:layout_weight="1"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/btnRecover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recuperar Conta"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -74,8 +85,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/white"
-            android:layout_gravity="center"/>
-
+            android:layout_gravity="center"
+            tools:visibility="visible"
+            android:visibility="invisible" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
