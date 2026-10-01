@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("kotlin-parcelize")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -48,7 +50,13 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.material)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    implementation(platform("com.google.firebase:firebase-bom:34.19.0"))
+    implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation("com.google.firebase:firebase-auth")
 }
