@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.luigi.task.ui.SplashFragment"
-        android:label="fragment_splash">
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
     </fragment>
 </navigation>
