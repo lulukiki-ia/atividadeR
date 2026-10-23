@@ -8,21 +8,41 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.luigi.task.R
+import com.luigi.task.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        initListener()
     }
+
+    private fun initListener(){
+        binding.buttonLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_global_homeFragment)
+        }
+
+        binding.btnRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+
+        binding.btnRecover.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_recoverAccountFragment)
+        }
+    }
+
 
     private fun loginUser(email: String, passoword: String){
         try {

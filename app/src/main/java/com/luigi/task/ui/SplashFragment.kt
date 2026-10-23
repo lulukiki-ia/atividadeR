@@ -56,7 +56,7 @@ class SplashFragment : Fragment() {
             Toast.makeText(requireContext(),e.message.toString(), Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_splashFragment_to_authetication)
         }
-        findNavController().navigate(R.id.action_splashFragment_to_autentication)
+        findNavController().navigate(R.id.action_splashFragment3_to_authentication)
     }
 
     override fun onDestroyView() {
