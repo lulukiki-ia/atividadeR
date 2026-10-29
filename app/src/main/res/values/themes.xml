@@ -8,4 +8,10 @@
     </style>
 
     <style name="Theme.Luigi" parent="Base.Theme.Luigi" />
+    
+    <style name="CustomTabLayout" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
 </resources>
